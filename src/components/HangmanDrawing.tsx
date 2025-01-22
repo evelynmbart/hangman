@@ -1,13 +1,14 @@
 const HEAD = (
   <div
     style={{
-      width: "50px",
-      height: "50px",
+      width: "35px",
+      height: "35px",
       borderRadius: "100%",
-      border: "10px solid black",
+      border: "8px solid #e84393",
       position: "absolute",
-      top: "50px",
-      right: "-30px",
+      top: "35px",
+      right: "-20px",
+      boxShadow: "0 0 10px rgba(232, 67, 147, 0.3)",
     }}
   />
 );
@@ -15,12 +16,14 @@ const HEAD = (
 const BODY = (
   <div
     style={{
-      width: "10px",
-      height: "100px",
-      background: "black",
+      width: "8px",
+      height: "70px",
+      background: "#e84393",
       position: "absolute",
-      top: "120px",
+      top: "85px",
       right: 0,
+      borderRadius: "4px",
+      boxShadow: "0 0 10px rgba(232, 67, 147, 0.3)",
     }}
   />
 );
@@ -28,12 +31,12 @@ const BODY = (
 const RIGHT_ARM = (
   <div
     style={{
-      width: "100px",
-      height: "10px",
-      background: "black",
+      width: "70px",
+      height: "8px",
+      background: "#e84393",
       position: "absolute",
-      top: "150px",
-      right: "-100px",
+      top: "105px",
+      right: "-70px",
       rotate: "-30deg",
       transformOrigin: "left bottom",
     }}
@@ -43,12 +46,12 @@ const RIGHT_ARM = (
 const LEFT_ARM = (
   <div
     style={{
-      width: "100px",
-      height: "10px",
-      background: "black",
+      width: "70px",
+      height: "8px",
+      background: "#e84393",
       position: "absolute",
-      top: "150px",
-      right: "10px",
+      top: "105px",
+      right: "8px",
       rotate: "30deg",
       transformOrigin: "right bottom",
     }}
@@ -58,12 +61,12 @@ const LEFT_ARM = (
 const RIGHT_LEG = (
   <div
     style={{
-      width: "100px",
-      height: "10px",
-      background: "black",
+      width: "70px",
+      height: "8px",
+      background: "#e84393",
       position: "absolute",
-      top: "210px",
-      right: "-90px",
+      top: "145px",
+      right: "-63px",
       rotate: "60deg",
       transformOrigin: "left bottom",
     }}
@@ -73,11 +76,11 @@ const RIGHT_LEG = (
 const LEFT_LEG = (
   <div
     style={{
-      width: "100px",
-      height: "10px",
-      background: "black",
+      width: "70px",
+      height: "8px",
+      background: "#e84393",
       position: "absolute",
-      top: "210px",
+      top: "145px",
       right: 0,
       rotate: "-60deg",
       transformOrigin: "right bottom",
@@ -97,32 +100,46 @@ export function HangmanDrawing({ numberOfGuesses }: HangmanDrawingProps) {
       {BODY_PARTS.slice(0, numberOfGuesses)}
       <div
         style={{
-          height: "50px",
-          width: "10px",
-          background: "black",
-          marginLeft: "120px",
+          height: "35px",
+          width: "8px",
+          background: "#e84393",
+          marginLeft: "84px",
           position: "absolute",
           top: 0,
           right: 0,
+          borderRadius: "4px",
+          boxShadow: "0 0 10px rgba(232, 67, 147, 0.3)",
         }}
       />
       <div
         style={{
-          height: "10px",
-          width: "200px",
-          background: "black",
-          marginLeft: "120px",
+          height: "8px",
+          width: "140px",
+          background: "#e84393",
+          marginLeft: "84px",
+          borderRadius: "4px",
+          boxShadow: "0 0 10px rgba(232, 67, 147, 0.3)",
         }}
       />
       <div
         style={{
-          height: "450px",
-          width: "10px",
-          background: "black",
-          marginLeft: "120px",
+          height: "315px",
+          width: "8px",
+          background: "#e84393",
+          marginLeft: "84px",
+          borderRadius: "4px",
+          boxShadow: "0 0 10px rgba(232, 67, 147, 0.3)",
         }}
       />
-      <div style={{ height: "10px", width: "250px", background: "black" }} />
+      <div
+        style={{
+          height: "8px",
+          width: "175px",
+          background: "#e84393",
+          borderRadius: "4px",
+          boxShadow: "0 0 10px rgba(232, 67, 147, 0.3)",
+        }}
+      />
     </div>
   );
 }

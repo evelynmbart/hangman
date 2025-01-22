@@ -1,8 +1,8 @@
 import { useCallback, useEffect, useState } from "react";
-import words from "./wordList.json";
 import { HangmanDrawing } from "./components/HangmanDrawing";
 import { HangmanWord } from "./components/HangmanWord";
 import { Keyboard } from "./components/Keyboard";
+import words from "./wordList.json";
 
 const getWord = () => {
   return words[Math.floor(Math.random() * words.length)];
@@ -73,19 +73,30 @@ function App() {
         maxWidth: "800px",
         display: "flex",
         flexDirection: "column",
-        gap: "2rem",
+        gap: "1rem",
         margin: "10px auto",
         alignItems: "center",
+        padding: "0 20px",
+        backgroundColor: "#2d3436",
+        borderRadius: "20px",
+        minHeight: "100vh",
       }}
     >
       <div
         style={{
-          fontSize: "2rem",
+          fontSize: "1.5rem",
           textAlign: "center",
+          color: "#fff",
+          backgroundColor: "#9b59b6",
+          padding: "10px 20px",
+          borderRadius: "10px",
+          boxShadow: "0 2px 5px rgba(0, 0, 0, 0.2)",
+          margin: "10px 0",
+          fontFamily: "'Comic Sans MS', cursive, sans-serif",
         }}
       >
-        {isWinner && "WINNER! - Refresh to try again"}
-        {isLoser && "Nice Try - Refresh to try again"}
+        {isWinner && "🎉 WINNER! - Press Enter to play again 🎮"}
+        {isLoser && "😅 Nice Try - Press Enter to play again 🎮"}
       </div>
       <HangmanDrawing numberOfGuesses={incorrectLetters.length} />
       <HangmanWord

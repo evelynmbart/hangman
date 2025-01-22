@@ -1,26 +1,41 @@
 .btn {
   width: 100%;
-  border: 3px solid black;
-  background: none;
+  border: none;
+  background: linear-gradient(145deg, #9b59b6, #8e44ad);
   aspect-ratio: 1 / 1;
-  font-size: 2.5rem;
+  font-size: clamp(1.5rem, 4vw, 2rem);
   text-transform: uppercase;
-  padding: 0.5rem;
+  padding: 0.25rem;
   font-weight: bold;
   cursor: pointer;
-  color: black;
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease;
+  font-family: "Comic Sans MS", cursive, sans-serif;
 }
 
 .btn.active {
-  background-color: hsl(200, 100%, 50%);
+  background: linear-gradient(145deg, #2ecc71, #27ae60);
   color: white;
+  box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 .btn.inactive {
-  opacity: 0.3;
+  opacity: 0.5;
+  background: #636e72;
+  box-shadow: none;
 }
 
 .btn:hover:not(:disabled),
 .btn:focus:not(:disabled) {
-  background-color: hsl(200, 100%, 75%);
+  background: linear-gradient(145deg, #00cec9, #00b894);
+  transform: translateY(-2px);
+}
+
+.btn:active:not(:disabled) {
+  transform: translateY(0);
+  box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
