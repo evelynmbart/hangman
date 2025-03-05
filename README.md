@@ -1,50 +1,31 @@
-# React + TypeScript + Vite
+# Hangman Web App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
 
-Currently, two official plugins are available:
+Welcome to the **Hangman Web App** – the classic word-guessing game, reimagined for the web! Test your vocabulary and your guessing skills in this simple and fun game, where the goal is to guess the hidden word before the hangman is completed.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Whether you're playing solo or with friends, **Hangman Web App** provides an engaging experience with a user-friendly interface and endless hours of entertainment.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Features
 
-- Configure the top-level `parserOptions` property like this:
+- **Classic Hangman Gameplay**: Guess the hidden word by suggesting letters one at a time. For every incorrect guess, part of the hangman is drawn.
+  
+- **User-Friendly Interface**: Simple and intuitive design for all ages, with clear instructions and a responsive layout.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- **Random Word Generation**: The game selects words from a random list, ensuring each game is different.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+- **Hangman Visualization**: Watch the hangman figure gradually be drawn for each incorrect guess.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+---
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## How to Play
+
+1. **Start the Game**: Click the “Start Game” button to begin a new game.
+2. **Guess the Word**: Guess letters one by one to fill in the blanks and discover the hidden word.
+3. **Incorrect Guesses**: Each incorrect guess will draw one part of the hangman. Be careful not to complete the figure!
+4. **Win or Lose**: You win by guessing all the letters of the word correctly before the hangman is completed. If the figure is completed, you lose the game.
+5. **Play Again**: Once the game ends, click “Play Again” or hit your enter key to start a new round.
+
+---
